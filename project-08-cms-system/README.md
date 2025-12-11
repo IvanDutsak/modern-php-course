@@ -321,9 +321,6 @@ CsrfHelper::requireValidToken();
 - ✅ **Dependency Injection** - гнучкість та тестованість
 - ✅ **Namespaces** - організація коду
 
-## Скріншоти
-
-Скріншоти роботи додатку доступні в папці `screenshots/`
 
 ## Автор
 
