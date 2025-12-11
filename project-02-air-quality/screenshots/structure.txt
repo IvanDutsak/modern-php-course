@@ -1,0 +1,6 @@
+=== project-02-air-quality ===
+/home/ubuntu/modern-php-course/project-02-air-quality/src/city.php
+/home/ubuntu/modern-php-course/project-02-air-quality/src/inc/functions.inc.php
+/home/ubuntu/modern-php-course/project-02-air-quality/src/index.php
+/home/ubuntu/modern-php-course/project-02-air-quality/src/views/footer.inc.php
+/home/ubuntu/modern-php-course/project-02-air-quality/src/views/header.inc.php

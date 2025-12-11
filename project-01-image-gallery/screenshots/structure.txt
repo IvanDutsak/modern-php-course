@@ -1,0 +1,7 @@
+=== project-01-image-gallery ===
+/home/ubuntu/modern-php-course/project-01-image-gallery/src/gallery.php
+/home/ubuntu/modern-php-course/project-01-image-gallery/src/image.php
+/home/ubuntu/modern-php-course/project-01-image-gallery/src/inc/functions.inc.php
+/home/ubuntu/modern-php-course/project-01-image-gallery/src/inc/images.inc.php
+/home/ubuntu/modern-php-course/project-01-image-gallery/src/views/footer.php
+/home/ubuntu/modern-php-course/project-01-image-gallery/src/views/header.php

@@ -1,4 +1,3 @@
-
 # Карпатський національний університет імені Василя Стефаника
 
 ## Кафедра комп’ютерних наук та інформаційних систем
@@ -20,13 +19,7 @@
 
 ## Сертифікат
 
-![Сертифікат Modern PHP](../certificate/certificate.png)
-
----
-
-## Загальна діаграма проектів
-
-![Діаграма проектів](../screenshots/projects-diagram.png)
+![Сертифікат Modern PHP](certificate/certificate.png)
 
 ---
 
@@ -53,11 +46,32 @@ PHP підтримує повноцінне ООП: класи, об’єкти,
 
 *   **Структура проекту:**
 
-    ![Структура проекту 1](../project-01-image-gallery/screenshots/structure.txt)
+    ```
+    src/
+    ├── gallery.php
+    ├── image.php
+    ├── images/
+    ├── inc/
+    │   └── images.inc.php
+    ├── styles/
+    │   └── simple.css
+    └── views/
+        ├── header.php
+        └── footer.php
+    ```
 
 *   **Ключовий код (gallery.php):**
 
-    ![Код gallery.php](../screenshots/project-01-gallery-code.txt)
+    ```php
+    <div class="gallery-container">
+        <?php foreach($imageTitles AS $src => $title): ?>
+        <a href="image.php?<?php echo http_build_query([\"image\" => $src]); ?>" class="gallery-item">
+            <h3><?php echo e($title); ?></h3>
+            <img src="./images/<?php echo rawurlencode($src); ?>" alt="<?php echo e($title); ?>" />
+        </a>
+    <?php endforeach; ?>
+    </div>
+    ```
 
 **Висновок:**
 Проект реалізує централізоване управління зображеннями через асоціативні масиви PHP, що дозволяє легко додавати нові фото. `gallery.php` показує зображення у сітці, а `image.php` - детальний перегляд із перевіркою параметрів та захистом від помилок. Використовуються функції `e()`, `rawurlencode()` та `rawurldecode()` для безпеки та коректної роботи з URL. Структура проекту розділяє логіку, шаблони та стилі, а `header.php` та `footer.php` забезпечують єдиний дизайн. Проект легкий для підтримки та масштабування.
@@ -87,7 +101,7 @@ PHP підтримує повноцінне ООП: класи, об’єкти,
 *   **Читання та обробка даних:**
 
     ```php
-    $jsonData = file_get_contents("data/index.json");
+    $jsonData = file_get_contents(\"data/index.json\");
     $data = json_decode($jsonData, true);
     ```
 
@@ -108,14 +122,14 @@ PHP-проект, що автоматично оновлює вітрину по
 *   **Сканування директорії:**
 
     ```php
-    $files = scandir("images/");
-    $imageFiles = array_filter($files, fn($file) => str_ends_with($file, ".jpg"));
+    $files = scandir(\"images/\");
+    $imageFiles = array_filter($files, fn($file) => str_ends_with($file, \".jpg\"));
     ```
 
 *   **Читання опису:**
 
     ```php
-    $description = file_get_contents("images/" . str_replace(".jpg", ".txt", $imageFile));
+    $description = file_get_contents(\"images/\" . str_replace(\".jpg\", \".txt\", $imageFile));
     ```
 
 **Висновок:**
@@ -144,9 +158,20 @@ PHP-проект, що автоматично оновлює вітрину по
     );
     ```
 
-*   **Ключовий код (index.php):**
+*   **Підготовлений запит для вставки:**
 
-    ![Код index.php](../screenshots/project-04-index-code.txt)
+    ```php
+    $stmt = $pdo->prepare(\"
+        INSERT INTO `entries` (`title`, `date`, `message`, `image`) 
+        VALUES (:title, :date, :message, :image)\"
+    );
+    $stmt->execute([
+        \"title\" => $title,
+        \"date\" => $date,
+        \"message\" => $message,
+        \"image\" => $imageName
+    ]);
+    ```
 
 **Висновок:**
 Проект реалізує повноцінний функціонал щоденника з можливістю перегляду, створення та збереження записів у базі даних. Структура таблиці `entries` забезпечує зручне зберігання тексту, дати та зображень. Завдяки коректній роботі з БД, обробці зображень та продуманому інтерфейсу проєкт є стабільним та безпечним.
@@ -156,7 +181,7 @@ PHP-проект, що автоматично оновлює вітрину по
 ## Проект 5: Дослідник імен
 
 **Опис:**
-Веб-додаток для дослідження та пошуку особистих імен. Програма дозволяє користувачам переглядати статистику найпопулярніших імен, досліджувати імена за першою літерою алфавіту та отримувати детальну інформацію про конкретне ім'я.
+Веб-додаток для дослідження та пошуку особистих імен. Програма дозволяє користувачам переглядати статистику найпопулярніших імен, досліджувати імена за першою літерою алфавіту та отримувати детальну інформацію про конкретне ім\\'я.
 
 **GitHub:** [project-05-name-explorer](https://github.com/IvanDutsak/modern-php-course/tree/main/project-05-name-explorer)
 
@@ -165,19 +190,19 @@ PHP-проект, що автоматично оновлює вітрину по
 *   **Алфавітна навігація та пагінація:**
 
     ```php
-    $letter = $_GET["letter"] ?? "A";
-    $page = $_GET["page"] ?? 1;
+    $letter = $_GET[\"letter\"] ?? \"A\";
+    $page = $_GET[\"page\"] ?? 1;
     $perPage = 15;
     $offset = ($page - 1) * $perPage;
 
-    $stmt = $pdo->prepare("
+    $stmt = $pdo->prepare(\"
         SELECT DISTINCT name 
         FROM names 
         WHERE name LIKE ? 
         ORDER BY name 
-        LIMIT ? OFFSET ?
+        LIMIT ? OFFSET ?\
     ");
-    $stmt->execute([$letter . "%", $perPage, $offset]);
+    $stmt->execute([$letter . \"%\", $perPage, $offset]);
     ```
 
 **Висновок:**
@@ -188,7 +213,7 @@ PHP-проект, що автоматично оновлює вітрину по
 ## Проект 6: Дослідник міст
 
 **Опис:**
-Веб-додаток на PHP, розроблений для перегляду та управління інформацією про міста по всьому світу. Проект демонструє сучасні практики розробки на PHP, включаючи об'єктно-орієнтоване програмування та шаблон Repository.
+Веб-додаток на PHP, розроблений для перегляду та управління інформацією про міста по всьому світу. Проект демонструє сучасні практики розробки на PHP, включаючи об\\'єктно-орієнтоване програмування та шаблон Repository.
 
 **GitHub:** [project-06-city-explorer](https://github.com/IvanDutsak/modern-php-course/tree/main/project-06-city-explorer)
 
@@ -201,7 +226,7 @@ PHP-проект, що автоматично оновлює вітрину по
         private PDO $pdo;
         
         public function findById(int $id): ?City {
-            $stmt = $this->pdo->prepare("SELECT * FROM cities WHERE id = ?");
+            $stmt = $this->pdo->prepare(\"SELECT * FROM cities WHERE id = ?\");
             $stmt->execute([$id]);
             $stmt->setFetchMode(PDO::FETCH_CLASS, City::class);
             return $stmt->fetch() ?: null;
@@ -217,7 +242,7 @@ PHP-проект, що автоматично оновлює вітрину по
 ## Проект 7: Додаток погоди
 
 **Опис:**
-Веб-додаток для відображення інформації про погоду в обраному місті. Проект розроблений на PHP з використанням принципів об'єктно-орієнтованого програмування та паттерну Strategy через інтерфейси.
+Веб-додаток для відображення інформації про погоду в обраному місті. Проект розроблений на PHP з використанням принципів об\\'єктно-орієнтованого програмування та паттерну Strategy через інтерфейси.
 
 **GitHub:** [project-07-weather-app](https://github.com/IvanDutsak/modern-php-course/tree/main/project-07-weather-app)
 
@@ -250,15 +275,27 @@ PHP-проект, що автоматично оновлює вітрину по
 
 *   **IoC Container:**
 
-    ![Код Container.php](../screenshots/project-08-container-code.txt)
+    ```php
+    class Container {
+        private array $recipes = [];
+        
+        public function bind(string $what, \Closure $recipe) {
+            $this->recipes[$what] = $recipe;
+        }
+        
+        public function get($what) {
+            return $this->recipes[$what]();
+        }
+    }
+    ```
 
 *   **MVC Routing:**
 
     ```php
     match($route) {
-        "home" => $container->get("pagesController")->index(),
-        "admin/pages" => $container->get("pagesAdminController")->index(),
-        default => $container->get("notFoundController")->show()
+        \"home\" => $container->get(\"pagesController\")->index(),
+        \"admin/pages\" => $container->get(\"pagesAdminController\")->index(),
+        default => $container->get(\"notFoundController\")->show()
     };
     ```
 
