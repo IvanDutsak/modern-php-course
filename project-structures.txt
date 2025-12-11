@@ -1,0 +1,84 @@
+=== Project 01 ===
+total 32
+drwxrwxr-x 6 ubuntu ubuntu 4096 Dec 10 19:38 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Dec 10 19:39 ..
+-rw-rw-r-- 1 ubuntu ubuntu  515 Dec 10 19:38 gallery.php
+-rw-rw-r-- 1 ubuntu ubuntu  721 Dec 10 19:38 image.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:38 images
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:38 inc
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:38 styles
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:38 views
+=== Project 02 ===
+total 36
+drwxrwxr-x 6 ubuntu ubuntu 4096 Dec 10 19:39 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Dec 10 19:39 ..
+-rw-rw-r-- 1 ubuntu ubuntu 5605 Dec 10 19:39 city.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 inc
+-rw-rw-r-- 1 ubuntu ubuntu  614 Dec 10 19:39 index.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 scripts
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 styles
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 views
+=== Project 03 ===
+total 20
+drwxrwxr-x 4 ubuntu ubuntu 4096 Dec 10 19:39 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Dec 10 19:39 ..
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 images
+-rw-rw-r-- 1 ubuntu ubuntu 2145 Dec 10 19:39 index.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 styles
+=== Project 04 ===
+total 36
+drwxrwxr-x 7 ubuntu ubuntu 4096 Dec 10 19:39 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Dec 10 19:40 ..
+-rw-rw-r-- 1 ubuntu ubuntu 3637 Dec 10 19:39 form.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 images
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 inc
+-rw-rw-r-- 1 ubuntu ubuntu 3123 Dec 10 19:39 index.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 styles
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 uploads
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:39 views
+=== Project 05 ===
+total 36
+drwxrwxr-x 6 ubuntu ubuntu 4096 Dec 10 19:40 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Dec 10 19:40 ..
+-rw-rw-r-- 1 ubuntu ubuntu  655 Dec 10 19:40 char.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:40 images
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:40 inc
+-rw-rw-r-- 1 ubuntu ubuntu  137 Dec 10 19:40 index.php
+-rw-rw-r-- 1 ubuntu ubuntu  290 Dec 10 19:40 name.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:40 styles
+drwxrwxr-x 4 ubuntu ubuntu 4096 Dec 10 19:40 views
+=== Project 06 ===
+total 48
+drwxrwxr-x 6 ubuntu ubuntu 4096 Dec 10 19:40 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Dec 10 19:41 ..
+-rw-rw-r-- 1 ubuntu ubuntu 5797 Dec 10 19:40 README.txt
+-rw-rw-r-- 1 ubuntu ubuntu  294 Dec 10 19:40 city.php
+-rw-rw-r-- 1 ubuntu ubuntu 1030 Dec 10 19:40 edit.php
+-rw-rw-r-- 1 ubuntu ubuntu  122 Dec 10 19:40 helper.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:40 inc
+-rw-rw-r-- 1 ubuntu ubuntu  442 Dec 10 19:40 index.php
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:40 src
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:40 styles
+drwxrwxr-x 4 ubuntu ubuntu 4096 Dec 10 19:40 views
+=== Project 07 ===
+total 36
+drwxrwxr-x 7 ubuntu ubuntu 4096 Dec 10 19:41 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Dec 10 19:42 ..
+-rw-rw-r-- 1 ubuntu ubuntu 2712 Dec 10 19:41 README.txt
+drwxrwxr-x 7 ubuntu ubuntu 4096 Dec 10 19:41 images
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:41 inc
+-rw-rw-r-- 1 ubuntu ubuntu  429 Dec 10 19:41 index.php
+drwxrwxr-x 3 ubuntu ubuntu 4096 Dec 10 19:41 src
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:41 styles
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:41 views
+=== Project 08 ===
+total 40
+drwxrwxr-x 6 ubuntu ubuntu 4096 Dec 10 19:42 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Dec 10 19:42 ..
+-rw-rw-r-- 1 ubuntu ubuntu 7112 Dec 10 19:42 PROJECT_ANNOTATION.txt
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:42 inc
+-rw-rw-r-- 1 ubuntu ubuntu 3375 Dec 10 19:42 index.php
+-rw-rw-r-- 1 ubuntu ubuntu  109 Dec 10 19:42 session.php
+drwxrwxr-x 7 ubuntu ubuntu 4096 Dec 10 19:42 src
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 10 19:42 styles
+drwxrwxr-x 4 ubuntu ubuntu 4096 Dec 10 19:42 views
